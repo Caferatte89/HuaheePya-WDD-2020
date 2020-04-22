@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="comment/comment.js" type="text/JavaScript"> </script>
+    <link href="../template/template.css" type="text/css" rel="stylesheet">
+    <link href="comment/comment.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="../template/small-logo.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comment</title>
+</head>
+
+<body>
+    <header>
+        <nav class="topnav_account">
+            <ul>
+                <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+                <li><a href="../register_login/register.html">Register</a></li>
+                <li><a href="../register_login/login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="container">
+            <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+            <nav class="menunav">
+                <ul>
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../menupage/menu.html">Menu</a></li>
+                    <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                    <li><a href="../special/special.html">Special</a></li>
+                    <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                    <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <!--display the designn of the comment form-->
+        <header id="topic">CHIKU PIA</header>
+        <header><img src="comment/chiku.jpg" alt="bagua" id="image"></header>
+        <fieldset id="rating">
+            <legend id="length">Rating</legend>
+
+            <label>Rate This Product</label>
+            <!--let user select the rating-->
+            <select name="fontfamily" id="rate">
+            <option value="1 STAR">1 STAR</option>
+            <option value="2 STAR">2 STAR</option>
+            <option value="3 STAR">3 STAR</option>
+            <option value="4 STAR">4 STAR</option>
+            <option value="5 STAR">5 STAR</option>
+            </select>
+        </fieldset>
+        <!--set a box let user enter the comment-->
+        <textarea id="comment" placeholder="Write something.."></textarea>
+        <!--set the submit button on right-->
+        <input type="button" value="Submit Comment" id="button" onClick="submitted()" align: "right";>
+
+    </section>
+
+    <footer>
+        <div class="fooimg">
+            <p>Visit us on:&nbsp;&nbsp;</p>
+            <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+            <p>&nbsp;</p>
+            <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <img id="debit" src="../template/debit-icons.png" />
+            <img id="credit" src="../template/credit-card-icons.png" />
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <img id="grab" src="../template/grabpay.png" />
+            <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use ("TERMS AND CONDITIONS")  , including the privacy policy ("
+                <a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered
+                through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us
+                an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

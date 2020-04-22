@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../template/template.css" type="text/css" rel="stylesheet">
+        <link href="register.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="../template/small-logo.ico" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Register</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="topnav_account">
+                <ul>
+                    <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+                    <li><a href="../register_login/register.html">Register</a></li>
+                    <li><a href="../register_login/login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="container">
+                <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+                <nav class="menunav">
+                    <ul>
+                        <li><a href="../home.html">Home</a></li>
+                        <li><a href="../menupage/menu.html">Menu</a></li>
+                        <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                        <li><a href="../special/special.html">Special</a></li>
+                        <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                        <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section>
+            <div class="reg-title">
+                REGISTER AS MEMBER:
+            </div>
+
+            <form name="registerForm" id="registerForm"  method="POST" onsubmit="return checkValid();" action="login.html">
+                <ul class="regcol-1">
+                    <li>First Name:&nbsp;</li>
+                    <input type="text" id="firstName" name="firstName" onfocus="textfocus(this)" onblur="textblur(this)" required="required" />
+                    <span></span>
+
+                    <li>Last Name:&nbsp;</li>
+                    <input type="text" id="lastName" name="lastName" onfocus="textfocus(this)" onblur="textblur(this)" required="required" />
+                    <span></span><span></span><span></span><span></span>
+
+                    <li>Email:&nbsp;</li>
+                    <input type="text" id="email" name="email" onfocus="textfocus(this)" onblur="textblur(this)" oninput="emailValid()" required="required" />
+                    <div class="errorArrow-email" id="errorArrow-email"></div>
+                    <div class="error-email" id="error-email"></div>
+                    <span></span>
+
+                    <li>Password:&nbsp;</li>
+                    <input type="password" id="password" name="password" onfocus="captionfocus(this, 'Minimum 8 to 20 characters with at least a number and symbol', '25.5vw')" onblur="textblur(this)" oninput="passwordValid()" required="required" />
+                    <div class="errorArrow-password" id="errorArrow-password"></div>
+                    <div class="error-password" id="error-password"></div>
+                    <span></span>
+
+                    <li>Confirmation Password:&nbsp;</li>
+                    <input type="password" id="confirmPassword" name="confirmPassword" onfocus="textfocus(this)" oninput="confirmSamePass()" onblur="textblur(this)" required="required" />
+                    <div class="errorArrow-confirmPassword" id="errorArrow-confirmPassword"></div>
+                    <div class="error-confirmPassword" id="error-confirmPassword"></div>
+                    <span></span><span></span><span></span><span></span>
+
+                    <li>Gender:&nbsp;</li>
+                    <select id="gender" name="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="P">Private</option>
+                    </select>
+                    <span></span>
+
+                    <li>Birthday:&nbsp;</li>
+                    <input type="date" id="birthday" name="birthday" required="required" />
+                    <span></span>
+
+                    <li>Phone Number:&nbsp;</li>
+                    <input type="text" id="phoneNum" name="phoneNum" onfocus="captionfocus(this, '012-3456789 or 012-34567890', '17.25vw')" oninput="phoneNumValid()" onblur="textblur(this)" required="required" />
+                    <div class="errorArrow-phoneNum" id="errorArrow-phoneNum"></div>
+                    <div class="error-phoneNum" id="error-phoneNum"></div>
+                </ul>
+
+                <ul class="regcol-2">
+                    <li>Address:</li><span></span>
+                    <textarea id="address" name="address" placeholder="Enter home address..." onfocus="addressfocus(this)" onblur="addressblur(this)" required="required"></textarea>
+                    <span></span><span></span>
+
+                    <input type="checkbox" id="receiveMail" name="receiveMail" />
+                    <li>&nbsp;I want to receive exclusive promotion<br>&nbsp;from HuaheePya.</li>
+                    <span></span><span></span>
+
+                    <input type="checkbox" id="agree" name="agree" required="required" />
+                    <li>&nbsp;I agree to Privacy Policy.</li>
+                    <span></span><span></span><span></span>
+
+                <input value="Sign Up" type="submit" style="text-align: center;"/>
+                </ul>
+            </form>
+
+            <div class="panel-bottom">
+                Or Sign up with:
+                &nbsp;<a href="google.html"><img src="google.png" alt="Google" /></a>
+                &nbsp;<a href="facebook.html"><img src="facebook.png" alt="Facebook" /></a>
+                <span style="float: right;">Already a member? <a href="login.html">Login</a> here.</span>
+            </div>
+        </section>
+
+        <footer>
+            <div class="fooimg">
+                <p>Visit us on:&nbsp;&nbsp;</p>
+                <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+                <p>&nbsp;</p>
+                <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <img id="debit" src="../template/debit-icons.png" />
+                <img id="credit" src="../template/credit-card-icons.png" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <img id="grab" src="../template/grabpay.png" />
+                <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use 
+                    ("TERMS AND CONDITIONS") 
+                    , including the privacy policy 
+                    ("<a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") 
+                    (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.</div>
+            </div>
+        </footer>
+
+        <script src="reglog.js" type="text/javascript"></script>
+    </body>
+</html>

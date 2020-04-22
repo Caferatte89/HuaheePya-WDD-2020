@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="payment.css" type="text/css" rel="stylesheet">
+    <link href="../template/template.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+            
+      function pay()
+      {
+          var payment = localStorage.getItem("lsgtotal");
+          document.getElementById('totalpayment').innerHTML=payment;
+      }
+
+      function start()
+      {
+      var today = new Date();
+      var day = today.getDate();
+      var month = today.getMonth() + 1;
+      var year = today.getFullYear();
+      var monthtxt = new Array("", "Jan" , "Feb" , "Mar" , "Apr" , "May" , "June" , "July" , "August" , "Sept" , "Oct" , "Nov" , "Dec" );
+      document.getElementById("date").value = day + " " + monthtxt[month] + " " + year;
+      }
+</script>
+
+    <title>Payment</title>
+</head>
+
+<body onload="start()" onload="pay()">
+  <header>
+    <nav class="topnav_account">
+        <ul>
+            <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+            <li><a href="../register_login/register.html">Register</a></li>
+            <li><a href="../register_login/login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+        <nav class="menunav">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../menupage/menu.html">Menu</a></li>
+                <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                <li><a href="../special/special.html">Special</a></li>
+                <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  
+
+  <fieldset style="text-align: center; width:50%; margin-left: auto; margin-right: auto; background-color:rgba(255, 166, 0, 0.596);">
+      <legend class="fieldsetT1"><h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: left;">Payment Details</h1> </legend>
+          <div class="icon-container">
+            <label class="fname"><h2>Accepted Cards</h2></label>
+            <img class="logo" src="../template/credit-card-icons.png" alt="credit-card-icons">
+          </div>
+      <div class="Billing">
+        <h2>Billing Information</h2>
+        <form action="/action_page.php" class="form1">
+          Today Date: <input class="input" name="date" id="date"type="text" />
+          <br>
+          <br>
+          First Name <span style="color:red">*</span>
+          <input class="inputB" name="fname" id="fname" required="required" type="text" placeholder="First Name"/>
+          <br>
+          Last Name <span style="color:red">*</span>
+          <input class="inputB" name="lname" id="lname" required="required" type="text" placeholder="Last Name"/>
+          <br>
+          <div>Phone Number:
+          <input class="inputB" type="tel" id="phoneNum" name="phoneNum" maxlength="11" placeholder="xxx-xxxx xxxx" required="required" pattern="[0]{1}[1]{1}[0-9]{1}-[0-9]{7}">
+      </div>
+      <!--Shipping Address-->
+        <div class="paymentMethod">
+        Payment Method
+        <br>
+        <input type="radio" name="payment" id="payment" required="required">
+        <label class="card">Credit Card</label>
+        <input type="radio" name="payment" id="payment" required="required">
+        <label class="card">Debit Card</label>
+        <br>
+        <br>
+       
+        Card Number <span style="color:red">*</span>         
+        <input class="inputB" name="ccNum" id="ccNum" max="9999999999999999" placeholder="No -"  required="required" type="number" />
+        <br>
+        <td>Expiration Date <span style="color:red">*</span></td>
+        <br>
+        </div>
+        <!-------Selection List( drop down list)------------>
+        <select class="select" name="Monthly List" id="monthList" required="required">
+          <optgroup label="--Month--">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            </optgroup>
+        </select>
+        <select class="select" id="year" name="year" required="required">
+          <optgroup label="--Year--">
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+            </optgroup>
+        </select>	
+        <br>
+        <style>
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button 
+            {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          </style>
+        <br>
+                  OTP <span style="color:red">*</span>
+                  <input name="otp" maxlength="3" required="required" placeholder="123"  type="number" />
+         <br>
+                  
+           <div class="shipping">
+              <h2>Shipping Address</h2>
+              <label for="fname"><i class="fa fa-user"></i> Full Name as on IC</label>
+              <input type="text" id="fname" name="firstname" placeholder="Name"><br>
+              <br>
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="abc@example.com"><br>
+              <br>
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="Address"><br>
+              <br>
+              <label for="state">County <sup style="color: red;">*</sup></label>
+              <br>
+              <select style="width:100px;" required="required">
+                <option value="Perlis">Perlis</option>
+                <option value="Kedah">Kedah</option>
+                <option value="Penang">Penang</option>
+                <option value="Perak">Perak</option>
+                <option value="Kelantan">Kelantan</option>
+                <option value="Terengganu">Terengganu</option>
+                <option value="Pahang">Pahang</option>
+                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                <option value="Selangor">Selangor</option>
+                <option value="Melaka">Melaka</option>
+                <option value="Johor">Johor</option>
+                <option value="Sabah">Sabah</option>
+                <option value="Sarawak">Sarawak</option>
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="Putrajaya">Putrajaya</option>
+                <option value="Labuan">Labuan</option>
+              </select><br>
+              <br>
+              <label for="city">City</label>
+              <br>
+              <input type="text" id="city" name="city" placeholder="City"><br>
+              <br>
+              <label for="poscode">Poscode</label>
+              <input type="text" id="poscode" name="poscode" placeholder="05400"><br>
+              <br>
+            </div>
+         
+
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <br>
+          <br>
+          <h1 style="font-family: 'Courier New', Courier, monospace; color: black;">Total Amount: 
+          <span id="totalpayment" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;">RM150</span>
+        </h1>
+          <br>
+          <input id="submit" type="submit" onclick="init()" value="Proceed" class="btn">
+          <input id="submit" type="reset" value="Reset All">
+          </form>
+          <script type="text/javascript">
+              function init()
+              {
+                  
+                  document.forms[0].onsubmit = function() {
+                  if (this.checkValidity()) 
+                  
+                  alert("Payment Successfull !!! Thanks For Visiting HuaHeePya");
+                  
+                  }
+                  
+              }
+          </script>
+        </form>
+  </fieldset>    
+
+<footer>
+    <div class="fooimg">
+        <p>Visit us on:&nbsp;&nbsp;</p>
+        <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+        <p>&nbsp;</p>
+        <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <img id="debit" src="../template/debit-icons.png" />
+        <img id="credit" src="../template/credit-card-icons.png" />
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <img id="grab" src="../template/grabpay.png" />
+        <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use 
+          ("TERMS AND CONDITIONS") 
+            , including the privacy policy 
+            ("<a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") 
+            (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.</div>
+    </div>
+</footer>
+  
+
+</body>
+</html>

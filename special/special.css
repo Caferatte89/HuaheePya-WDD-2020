@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Californian FB';
+    src: url('CALIFB.TTF')
+}
+
+@font-face {
+    font-family: 'Cambria';
+    src: url('Cambria.ttf')
+}
+
+body { background: rgb(182, 0, 0); }
+
+.container { background: linear-gradient(#3b3b3b, #facd07 10%, #facd07 90%, #b60000); }
+
+footer { background: linear-gradient(#b60000, #000000 30%); }
+
+.gift-recommend {
+    min-height: 40em;
+    background-image: url("background.jpg");
+    background-size: cover;
+    box-shadow: 0 0 8px 8px rgb(182, 0, 0) inset;
+}
+
+.box-image { display: inline-block; }
+
+.box-image img {
+    margin: 5vw 0 0 5vw;
+    width: 40vw;
+    height: 30vw;
+}
+
+.personalize { display: inline-block; vertical-align: top; }
+
+.personalize h1 {
+    padding-left: 10vw;
+
+    color: white;
+    font-size: 5vw;
+    font-family: 'Californian FB', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 5px white;
+}
+
+[class^="personal-"] {
+    margin: 0 0 0 10vw;
+    width: 5vw;
+    height: 5vw;
+    display: inline-block;
+    vertical-align: top;
+
+    border: 0.35vw solid white;
+    border-radius: 1vw;
+    box-shadow: 1px 1px 15px white;
+}
+
+[class^="personal-"] img { 
+    padding: 0.25vw;
+    width: 90%; 
+    height: 90%;
+    user-select: none;
+}
+
+[class^="personal-"] [class^="tri-"] {
+    position: relative;
+    z-index: 1;
+    width: 0; 
+    height: 0; 
+    margin: 1vw 0 0 2vw;
+    border-left: 0.5vw solid transparent;
+    border-right: 0.5vw solid transparent;
+    border-top: 1vw solid white;
+}
+
+[class^="personal-"] p {
+    position: absolute;
+
+    margin: 0.5vw 0 0 -5vw;
+    width: 14.5vw;
+    height: 7.5vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    transition: all 0.3s ease;
+    user-select: none;
+
+    color: transparent;
+    background-color: transparent;
+    text-shadow: 0 0 0;
+    box-shadow: 0 0 0 0;
+    font-family: 'Californian FB', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.personalize #leadCustomize {
+    position: relative;
+    z-index: 0;
+    top: 5vw;
+    left: 22.75vw;
+    width: 12.5vw;
+    height: 5vw;
+    border-radius: 1vw;
+    text-align: center;
+    user-select: none;
+
+    transition: all 0.2s ease;
+    font-size: 2vw;
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    box-shadow: 0 0.2vw 0.4vw #fff, 0 -0.1vw 0.1vw #666, inset 0 -0.3vw 0.3vw rgba(0,0,0,0.5), inset 0 0.1vw 0.1vw rgba(255,255,255,0.8);
+    background-color: rgb(255, 106, 0);
+    outline: rgba(0, 0, 0, 0);
+    text-shadow: 1px 1px 10px white;
+    color: white;
+    letter-spacing: 0.075vw;
+}
+
+.personalize #leadCustomize:hover { background-color: rgb(255, 38, 0);  }

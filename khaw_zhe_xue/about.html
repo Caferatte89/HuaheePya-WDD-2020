@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../template/template.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="../template/small-logo.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">  
+        <title>About Us</title>
+        <!--Select the meta and link css-->
+
+        <style>
+            body {
+              font-family: 'Lato', sans-serif;
+            }
+            
+            <!--Overlay Design-->
+            .overlay {
+              height: 100%;
+              width: 0;
+              position: fixed;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              background-color: rgba(0,0,0, 0.9);
+              overflow-x: hidden;
+              transition: 0.5s;
+            }
+            
+            .overlay-content {
+              position: relative;
+              top: 25%;
+              width: 100%;
+              text-align: center;
+              margin-top: 30px;
+            }
+            
+            .overlay a {
+              padding: 8px;
+              text-decoration: none;
+              font-size: 36px;
+              color: #818181;
+              display: block;
+              transition: 0.3s;
+            }
+            
+            .overlay a:hover, .overlay a:focus {
+              color: #f1f1f1;
+            }
+            
+            .overlay .closebtn {
+              position: absolute;
+              top: 20px;
+              right: 45px;
+              font-size: 60px;
+            }
+            
+            @media screen and (max-height: 450px) {
+              .overlay a {font-size: 20px}
+              .overlay .closebtn {
+              font-size: 40px;
+              top: 15px;
+              right: 35px;
+              }
+            }
+
+            h1{
+                text-align: center;
+                left: auto;
+                right: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2em;
+            }
+
+            p{
+                left: auto;
+                right: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2em;
+            }
+/*Container Design and topnav that for history and more*/
+  .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+/*Setting icon Design*/
+.topnav a.icon {
+  background:rgb(248, 246, 246);
+  background-color: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*Hover*/
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(255, 255, 255);
+}
+/* color setting */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+body{background-image: url('background1.jpg');}
+
+/*accordion hover*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+}
+
+/* Color Transfer*/
+@-webkit-keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+@keyframes bg-color {
+  0% { background-color: #f7e928; }
+  20% { background-color: #b0f72e; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: rgb(240, 238, 231);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.picture{
+  width: auto;
+  float: left;
+}
+
+.buttonRight{
+  float:right;
+}
+
+.container1 {
+  position: relative;
+  width: 50%;
+}
+
+.container2 {
+  position: relative;
+  width: 25%;
+}
+
+.imageMean {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+  overflow: hidden;
+  width: 50%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container1:hover .overlay {
+  height: 100%;
+}
+
+.container2:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+button{
+  border-radius: 8px;
+}
+/* different boxed for paragraph */
+.boxed {
+        border-radius: 5px;
+        border: 5px solid;
+        color: red;
+        width: 42em;
+        height: 23em;
+        background-color: rgb(245, 229, 6);
+        padding: 1em;
+    }
+
+    .boxed1 {
+        border-radius: 5px;
+        border: 5px solid;
+        color: red;
+        width: 27em;
+        height: 23em;
+        background-color: rgb(245, 229, 6);
+        padding: 1em;
+        margin-left: 2em;
+        margin-top: 2em;
+    }
+
+    p{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* let button have color transfer hover */
+
+button:hover{
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+}
+
+.paragraph
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: yellow;
+  font-size: 1em;
+  
+}
+
+.paragraph1
+{
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding-bottom: 10em; padding-left: 4em;
+}
+
+  </style>
+    </head>
+
+    <body>
+      <!--Header-->
+      <header>
+        <nav class="topnav_account">
+            <ul>
+                <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+                <li><a href="../register_login/register.html">Register</a></li>
+                <li><a href="../register_login/login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="container">
+            <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+            <nav class="menunav">
+                <ul>
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../menupage/menu.html">Menu</a></li>
+                    <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                    <li><a href="../special/special.html">Special</a></li>
+                    <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                    <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!--Promtion Slide-->
+<div class="w3-content w3-display-container" class="w3-center" style="padding-left: 5.2cm;">
+  <img class="mySlides" src="aboutus1.png" style="width: 80%; height: 30em; border: 5em; border: 2px solid rgb(255, 238, 0)">
+  <img class="mySlides" src="aboutus2.jpg" style="width: 80%; height: 30em; border: 5em; border: 2px solid rgb(255, 238, 0)">
+  <img class="mySlides" src="aboutus11.jpg" style="width: 80%; height: 30em; border: 5em; border: 2px solid rgb(255, 238, 0)">
+  <img class="mySlides" src="aboutus22.jpeg" style="width: 80%; height: 30em; border: 5em; border: 2px solid rgb(255, 238, 0)">
+</div>
+
+  <button style="width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0);" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)"><b>&#10094;</b></button>
+  <div class="buttonRight">
+  <button style="width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0);" class="w3-button w3-black w3-display-right"  onclick="plusDivs(1)"><b>&#10095;</b></button>
+</div>
+</div>
+<hr>
+<!--Paragarph in border-->
+<table>
+  <tr>
+    <th>
+         <br>
+          <div class="boxed">
+          <h1><u><b>HuaheePya</b></u></h1>
+          <p>What is HuaheePya? HuaheePya is a company that sell various types of Chinese pastry.</p>
+          <p>The company’s objective is to produce a good relationship with customers started from having delicious Chinese pastry that is......</p>
+          <p><b> <span style="color: red;">“You Huahee, We happy.” </span></b></p>
+          <p>  As for all customers who were support us until today <br> we still improve ourselves in services area.</p>
+          <p>So,We making a website to provide more convenient services to customers and let customers know about our detail information in latest time. </p>
+        </div>
+      </th>
+      <th>
+        <h3 style="color: yellow; font-family: Arial, Helvetica, sans-serif; padding-bottom: 1em; padding-left: 3em; font-size: 1.5em;">你开心，我们欢喜 ！<br>You Huahee, We happy !!</h3>
+        <div class="paragraph1">
+        <p>This sentence is one of our first-time boss's favorite words.</p>
+        <p> When I occasionally made jokes with customers, I accidentally became a verbal conversation,<br>and now it has become the word of mouth of the store, a sentence with commemorative value.</p>
+      </div>
+      </th>
+      </tr>
+      </table>
+          <hr>
+          <!--Youtube embbeded-->
+          <iframe style="margin-left:24em ;" width="560" height="315" src="https://www.youtube.com/embed/xGOqM0MwGhg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <table>
+            <tr>
+              <th>
+              <div class="paragraph">
+                <p>All our achievements are accumulated by our history. 
+                Whether it is an exclusive formula, business methods or other, all are digged by the seniors one by one, and then share the results with us. 
+                HuaheePya is not just a shop, he is a proof, a proof that we and the seniors get along with you.</p>
+                <p>At the same time, we are committed to serving our guests without any slack. We strongly believe that as long as we are upright and do our best to provide the best service for our guests, without cutting corners, we will surely usher in good results. This is also one of our purposes.</p>
+              </div>
+              </th>
+              <th>
+                <div class="paragraph">
+                  <p>After going through many things, HuaheePya now has a stable career, owns its own branch, and is also popular.
+                  In the future, he will become better, continue to provide the best service for everyone,please continue to support us, thank you very much.</p>
+                </div>
+              </th>
+            </tr>
+          </table>
+          <hr>
+          <!--Usemap function-->
+          <table>
+            <tr>
+                <th>
+        <img style=" width: 700; height: 430; border: 5em; border: 4px solid rgb(255, 174, 0)" src="logo.png" usemap="#logodetail">
+
+        <map name="logodetail">
+          <area shape="rect" coords="85,82,324,321" alt="Hua" href="aboutus1.html">
+          <area shape="rect" coords="322,26,500,275" alt="Hee" href="aboutus2.html">
+          <area shape="rect" coords="502,45,709,277" alt="Pya" href="aboutus3.html">
+        </map>
+    </th>
+    <th>
+        <div class="boxed1">
+            <h3>You can Click the Picture Words <br>to Checking Meaning and finding <br>a small special history OF about WORDS of "欢"，“喜” and “饼”.</h3>
+            <img style="height: 10em; width: 17em;" src="arrowL.png">
+            <p>Press Click the picture words to try it ! \.^./</p>
+        </div>
+            <br>
+            <br>
+          </div>
+        </th>
+        </tr>
+        </table>
+        <!--Using the different accordion for display the detail information-->
+          <hr>
+          <button class="accordion">History</button>
+<div class="panel">
+  <p>In 1999, The First company main Branch - HuaheePya Penang Main Campus will be builded in Penang Times Square until Today.</p>
+  <div class="container1">
+    <img src="timesquare.jpg"  class="imageMean" >
+    <div class="overlay">
+      <div class="text">Penang Time Square</div>
+    </div>
+  </div>
+  <hr>
+  <p>In 2003, HuaheePya's popularity started to rise.</p>
+  <div class="container1">
+    <img src="rencao.jpg"  class="imageMean" >
+    <div class="overlay">
+      <div class="text">Popularity rise</div>
+    </div>
+  </div>
+  <hr>
+  <p>In 2005, HuaheePya having the first branch in Kedah.</p>
+  <div class="container1">
+    <img src="kk.svg"  class="imageMean" >
+    <div class="overlay">
+      <div class="text">Kedah</div>
+    </div>
+  </div>
+  <hr>
+  <p>In 2007, HuaheePya tried to add some special menu.</p>
+  <div class="container1">
+    <img src="sp.jpg"  class="imageMean" >
+    <div class="overlay">
+      <div class="text">Special Menu</div>
+    </div>
+  </div>
+  <hr>
+  <p>In 2009, HuaheePya having the second branch in Kuala Lumpur</p>
+  <div class="container1">
+    <img src="kl.jpg"  class="imageMean" >
+    <div class="overlay">
+      <div class="text">Kuala Lumpur</div>
+    </div>
+  </div>
+  <hr>
+  <p>In 2015, HuaheePya having a new branch in Johor.</p>
+  <div class="container1">
+    <img src="johor.jpg"  class="imageMean" >
+    <div class="overlay">
+      <div class="text">Johor</div>
+    </div>
+  </div>
+  <hr>
+  <p>In 2020, HuaheePya started having a network services in website.</p>
+</div>
+
+<button class="accordion">Main Member</button>
+<div class="panel">
+  <h3>Khaw Zhe Xue</h3>
+  <p>A very handsome person who was very genius in the company.In 1999, He started to initiate the company of HuaheePya.</p>
+  <div class="container2">
+    <img src="zhexue.jfif"  class="imageMean" style="height: 10em; width: 10em; ">
+    <div class="overlay">
+      <div class="text">Mr Khaw Zhe Xue</div>
+    </div>
+  </div>
+  <hr>
+  <h3>Ong Chen Xiang</h3>
+  <p>The Zhe Xue's undermen, follow the boss Zhe Xue's footsteps and fight together</p>
+  <div class="container2">
+    <img src="chenxiang.jpg"  class="imageMean" style="height: 10em; width: 10em; ">
+    <div class="overlay">
+      <div class="text">Mr Ong Chen Xiang</div>
+    </div>
+  </div>
+  <hr>
+  <h3>Chin Sze Sing</h3>
+  <p>The Zhe Xue's undermen, follow the boss Zhe Xue's footsteps and fight together</p>
+  <div class="container2">
+    <img src="sze sing.jfif"  class="imageMean" style="height: 10em; width: 10em; ">
+    <div class="overlay">
+      <div class="text">Mr Chin Sze Sing</div>
+    </div>
+  </div>
+  <hr>
+  <h3>Tan Yi Xuan</h3>
+  <p>The Zhe Xue's undermen, follow the boss Zhe Xue's footsteps and fight together</p>
+  <div class="container2">
+    <img src="yixuan.jpg"  class="imageMean" style="height: 10em; width: 10em; ">
+    <div class="overlay">
+      <div class="text">Mr Tan Yi Xuan</div>
+    </div>
+  </div>
+</div>
+
+<button class="accordion">Background</button>
+<div class="panel">
+  <p>HuaheePya was founded on July 18, 1999, by semiconductor pioneers Khaw Zhe Xue, who had left Fairchild Semiconductor. Originally called “NM Food” — the company purchased the rights to use the name “HhPya,” short for Integrated foodstuff, from a company called HuaheePya</p>
+</div>
+<hr>
+<!--Footer-->
+<footer>
+  <div class="fooimg">
+      <p>Visit us on:&nbsp;&nbsp;</p>
+      <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+      <p>&nbsp;</p>
+      <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <img id="debit" src="../template/debit-icons.png" />
+      <img id="credit" src="../template/credit-card-icons.png" />
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <img id="grab" src="../template/grabpay.png" />
+      <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use 
+        ("TERMS AND CONDITIONS") 
+          , including the privacy policy 
+          ("<a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") 
+          (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.</div>
+  </div>
+</footer>
+
+<script>
+
+  /* accordion function */
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+
+/* function of auto slide */
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+  </script>
+    </body>
+</html>

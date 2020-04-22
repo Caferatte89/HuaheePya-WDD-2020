@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Cambria';
+    src: url('Cambria.ttf')
+}
+
+section {
+    padding-bottom: -1vw;
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+/* Top of the word */
+.reg-title {
+    padding: 2vw 6.25vw 0.5vw 6.25vw;
+    
+    color: white;
+    vertical-align: text-bottom;
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vw;
+
+    text-shadow: 1px 1px 10px white;
+}
+
+/* Box of the panel */
+#registerForm {
+    padding-top: 0.15vw;
+    padding-bottom: 0.15vw;
+    margin: auto 6vw;
+
+    background-color: rgb(255, 240, 221);
+    box-shadow: 0 0.2vw 0.4vw #fff, 0 -0.1vw 0.1vw #666, inset 0 -0.3vw 0.3vw rgba(0,0,0,0.5), inset 0 0.1vw 0.1vw rgba(255,255,255,0.8);
+    border-radius: 1vw;
+}
+
+/* Set padding for the both ul column */
+#registerForm ul { padding-left: 1vw; list-style-type: none; display: inline-block;}
+
+#registerForm ul.regcol-2 { padding-right: 10vw; float: right; }
+
+#registerForm ul li {
+    display: inline-block;
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5vw;
+}
+
+/* Style of general textbox input */
+#registerForm ul input[type="text"], #registerForm ul input[type="password"], #registerForm ul input[type="date"], ul select[id="gender"] {
+    vertical-align: top;
+    width: 15vw;
+    height: 1.5vw;
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
+
+    background: linear-gradient(rgb(255, 255, 255), rgb(248, 247, 244));
+    border-color: rgb(234, 222, 207);
+    border-radius: 0.5vw;
+    outline: rgba(0, 0, 0, 0);
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.25vw;
+    transition: all 0.3s ease;
+}
+
+#registerForm ul input[type="password"]::placeholder { font-size: 0.94vw; }
+
+#registerForm ul select[id="gender"] { width: 8vw; height: 2vw; border: inset; transition: all 0.5s ease; }
+
+#registerForm ul input[type="date"] { width: auto; height: 1.75vw; }
+
+#registerForm ul span { display: block; width: 0;height: 1vw; }
+
+#registerForm ul textarea[id="address"] {
+    width: 30vw;
+    height: 7vw;
+    resize: none;
+    transition: all 0.3s ease;
+
+    vertical-align: top;
+    padding-top: 0;
+
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.25vw;
+
+    border: inset;
+    border-color: rgb(234, 222, 207);
+    border-radius: 0.5vw;
+    outline: rgba(0, 0, 0, 0);
+
+}
+
+#registerForm ul input[type="checkbox"] {
+    display: inline-block;
+    margin: 0.2vw auto auto auto;
+    width: 1.5vw;
+    height: 1.5vw;
+    vertical-align: top;
+}
+
+#registerForm ul input[type="submit"] {
+    margin-left: 10vw;
+    width: 12vw;
+    height: 4vw;
+    border-radius: 1vw;
+
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+
+    box-shadow: 0 0.2vw 0.4vw #fff, 0 -0.1vw 0.1vw #666, inset 0 -0.3vw 0.3vw rgba(0,0,0,0.5), inset 0 0.1vw 0.1vw rgba(255,255,255,0.8);
+    background-color: rgb(255, 106, 0);
+    outline: rgba(0, 0, 0, 0);
+    text-shadow: 0.25px 0.25px 40px white;
+    color: white;
+}
+
+#registerForm ul input[type="submit"]:hover { 
+    transition: all 0.3s ease; 
+    text-shadow: 0.5px 0.5px 10px white; 
+    background-color: rgb(255, 81, 0); 
+    margin-left: 9.5vw; 
+    width: 13vw;
+}
+
+[class^="error-"] {
+    position: absolute;
+    padding: 0.5vw;
+    transition: all 0.3s ease;
+    margin-top: 0.4vw;
+    border-radius: 1vw;
+    font-size: 0.9vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 0.01px 0.01px 40px white;
+}
+
+[class^="errorArrow-"] {
+    content: "";
+    position: absolute;
+    margin-top: -0.4vw;
+    margin-left: 1vw;
+    
+    border-width: 0.4vw;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.panel-bottom {
+    padding: 1vw 6.25vw 1vw 6.25vw;
+
+    font-family: 'Cambria' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 1.25vw;
+    text-shadow: 1px 1px 10px white;
+}
+
+.panel-bottom span a { color: white; }
+
+.panel-bottom img { vertical-align: middle; width: 2vw; height: 2vw; }

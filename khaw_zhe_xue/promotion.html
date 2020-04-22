@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<title>Promotion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link href="../template/template.css" type="text/css" rel="stylesheet">
+<link rel="icon" href="../template/small-logo.ico" />
+
+<style>
+.mySlides {display:none}
+td { 
+  float : right;
+  }
+
+  .img {
+    border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+  
+  }
+
+  @-webkit-keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+@keyframes bg-color {
+  0% { background-color: #f7e928; }
+  20% { background-color: #b0f72e; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+  button:hover{
+    background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+  }
+
+  body{background-image: url('background1.jpg');}
+
+</style>
+<body>
+
+  <header>
+    <nav class="topnav_account">
+        <ul>
+            <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+            <li><a href="../register_login/register.html">Register</a></li>
+            <li><a href="../register_login/login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+        <nav class="menunav">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../menupage/menu.html">Menu</a></li>
+                <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                <li><a href="../special/special.html">Special</a></li>
+                <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--Setting the border at slide and alert box and Prompt box and auto SLIDE-->
+<span style="padding-left: 19em; "><img style="border-radius: 5px; border: 1px solid rgb(255, 176, 5);" src="try1.png"/></span>
+<p style="color: white; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 2.3em; border-radius: 5px; border: 3px solid; background-color: #e74c3c; animation: bg-color 10s infinite; -webkit-animation: bg-color 10s infinite; "><b>Welcome to Promotion Website.</b></p>
+
+<div class="w3-content" class="w3-content w3-section" style="max-width:9790px; margin-top: 2em;">
+  <img class="mySlides" style="width: 90%; height: 15cm; border-radius: 5px; border: 1px solid rgb(255, 176, 5);" onclick="myFunction1()" src="proslide1.png" >
+  <img class="mySlides" style="width: 90%; height: 15cm; border-radius: 5px; border: 1px solid rgb(255, 176, 5);" onclick="myFunction2()" src="proslide2.jpg" >
+  <img class="mySlides" style="width: 90%; height: 15cm; border-radius: 5px; border: 1px solid rgb(255, 176, 5);" onclick="myFunction3()" src="kfc.jpg">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" style="width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0); " onclick="plusDivs(-1)"><b>❮ Prev</b></button>
+    <button class="w3-button w3-light-grey" style="margin-left: 81em; margin-top: 1em; width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0); " onclick="plusDivs(1)"><b>Next ❯</b></button>
+  </div>
+  <button class="w3-button demo" style="margin-left: 36em; width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0);" onclick="currentDiv(1)"><b>1</b></button> 
+  <button class="w3-button demo" style="width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0);" onclick="currentDiv(2)"><b>2</b></button> 
+  <button class="w3-button demo" style="width: 5em; height: 3em; border-radius: 5px; border: 1px solid rgb(255, 255, 255); color:rgb(255, 255, 255); background-color: rgb(255, 0, 0);" onclick="currentDiv(3)"><b>3</b></button> 
+</div>
+
+<table style="width:100%; margin-top: 3em; border-spacing: 5px;">
+  <tr>
+    <td><img style="height: 20em; width: 33em; border: 5em; border: 2px solid rgb(255, 238, 0); margin-right: 2em; margin-bottom: 2em;" onclick="myFunction4()" src="proslide4.jpg" ></td>
+    <td><img style="margin-right: 3em; height: 20em; width: 41em; border: 5em; border: 2px solid rgb(255, 238, 0);" onclick="myFunction7()" src="futurepro.png" ></td>
+  </tr>
+  <tr>
+    <td><img style="height: 20em; width: 33em; border: 5em; border: 2px solid rgb(255, 238, 0); margin-right: 2em; margin-bottom: 2em;" onclick="myFunction5()" src="proslide5.jpg" ></td>
+    <td><img style="margin-right: 3em; height: 20em; width: 41em; border: 5em; border: 2px solid rgb(255, 238, 0);" onclick="myFunction8()" src="profuture.png" ></td>
+  </tr>
+  <tr>
+    <td><img style="height: 20em; width: 33em; border: 5em; border: 2px solid rgb(255, 238, 0); margin-right: 2em; margin-bottom: 2em;" onclick="myFunction6()" src="proslide6.jpg" ></td>
+  </tr>
+</table>
+
+<div class="img">
+<p style="color: white; font-family: Arial, Helvetica, sans-serif; text-align: center;"><b>Please continue to look forward to the next promotions. Please also continue to support us a lot, so that we have the impetus for continuous improvement.</b></p>
+</div>
+
+<footer>
+  <div class="fooimg">
+      <p>Visit us on:&nbsp;&nbsp;</p>
+      <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+      <p>&nbsp;</p>
+      <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <img id="debit" src="../template/debit-icons.png" />
+      <img id="credit" src="../template/credit-card-icons.png" />
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <img id="grab" src="../template/grabpay.png" />
+      <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use 
+        ("TERMS AND CONDITIONS") 
+          , including the privacy policy 
+          ("<a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") 
+          (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.</div>
+  </div>
+</footer>
+
+<script>
+
+function myFunction1() {
+  var person = prompt("\nEvent Details :\n------------------------------------------------\nWe having a snake Plate Combo which is only using RM12 !!\nPlease using this Discount code in 12/12 !\n------------------------------------------------", "ARED13234@#");
+}
+
+function myFunction2() {
+  var person = prompt("\nEvent Details :\n------------------------------------------------\nWe started working with GrabFood & Domino !!\nYou can using this Discount code for get Discount when you order our menu in GrabFood or Domino Website.\n------------------------------------------------", "DOMINOS48");
+}
+
+function myFunction3() {
+  var person = prompt("\nEvent Details :\n------------------------------------------------\nNow, We having a Special Event !!\n We having Discount Delivery Event !\nPlease using this Discount Code for getting your Discount and Don't miss this offer !!\n------------------------------------------------", "ONGSOME28");
+}
+
+function myFunction4() {
+  var person = alert("\nEvent Details :\n-------------------------------------------------\nIn 7 September 2020, we will having 50% Discount Event !!\nPlease continue follow our first message for getting new Discount.\n");
+}
+
+
+function myFunction5() {
+  var person = alert("\nEvent Details :\n-------------------------------------------------\nIn future, We will having a BarGain Feast Event !\n 6 PSC for only RM 28.90 !\nPlease continue follow our first message for getting new Discount.\n");
+}
+
+
+function myFunction6() {
+  var person = alert("\nEvent Details :\n------------------------------------------------\nStarted from December 2020, we will having a Super Tuesday Event.\nIn December every Tuesday, all personal plate were only RM3.90 !!\n\nPlease don't forget it !\n");
+}
+
+function myFunction7() {
+  var person = alert("\nEvent Details :\n------------------------------------------------\nThis program will be held. \nPlease look forward to it and continue to follow our latest news.\n \>^</");
+}
+
+function myFunction8() {
+  var person = alert("\nEvent Details :\n------------------------------------------------\nThis program will be held. \nPlease look forward to it and continue to follow our latest news.\n \>^</");
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+//
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

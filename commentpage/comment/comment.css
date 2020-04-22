@@ -1,0 +1,129 @@
+/*set the design of the body*/
+
+body {
+    background-image: url(background2.jpg);
+    background-repeat: repeat;
+}
+
+
+/*set the layout of the rating*/
+
+#rating {
+    margin-top: 1vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw;
+    border: black solid;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    background-color: orange;
+    width: 85vw;
+}
+
+
+/*set the design of the word in rating*/
+
+#rate {
+    margin-left: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw;
+}
+
+
+/*set the design of the word in rating*/
+
+#length {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3vw;
+}
+
+
+/*set the design of the product image*/
+
+#image {
+    display: block;
+    margin-top: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15vw;
+    border: black solid;
+}
+
+
+/*set the layout of the word*/
+
+#topic {
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 3vw;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
+
+section#left {
+    min-height: 40em;
+    margin-top: 5vw;
+    float: left;
+    padding-bottom: 5vw;
+    width: 30%;
+}
+
+section#center {
+    min-height: 40em;
+    margin-top: 5vw;
+    float: left;
+    padding-bottom: 5vw;
+    width: 70%;
+}
+
+
+/*set the layout of the comment*/
+
+#comment {
+    margin-top: 2vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 2vw;
+    float: left;
+    border: black solid;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    background-color: orange;
+    width: 80vw;
+}
+
+
+/*set the layout of the submit button*/
+
+#button {
+    float: left;
+    border: none;
+    color: white;
+    margin-left: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+    border: black solid;
+    text-shadow: 0px 0px 5px black;
+    padding: 14px 28px;
+    font-size: 1.5vw;
+    cursor: pointer;
+    background-color: rgb(0, 92, 12);
+}
+
+#button {
+    background: rgb(0, 255, 34);
+}
+
+
+/*set the layout of the succes word*/
+
+#sucess {
+    display: block;
+    background-color: orange;
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 50px rgb(0, 0, 0);
+}

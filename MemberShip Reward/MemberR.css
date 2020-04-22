@@ -1,0 +1,27 @@
+.term
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    background-color:  rgba(255, 166, 0, 0.568);
+    
+}
+
+.right
+{
+    padding-right: 30px;
+    padding-left: 20px;
+    
+}
+
+.reward
+{
+    padding: 20px;
+    background-color: rgba(255, 166, 0, 0.568);
+    width: 100%;
+    border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15pt;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}

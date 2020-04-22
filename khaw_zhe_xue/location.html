@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="../template/template.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="../template/small-logo.ico" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <title>Location</title>
+
+        <style>
+            * {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+body{background-image: url('background1.jpg');}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: rgb(119, 119, 119);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 145%;
+}
+
+
+#Kedah,#Penang,#KualaLumpur,#Johor {
+  background-color: #e74c3c;
+  animation: bg-color 10s infinite;
+  -webkit-animation: bg-color 10s infinite;
+}
+
+@-webkit-keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+@keyframes bg-color {
+  0% { background-color: #e74c3c; }
+  20% { background-color: #f1c40f; }
+  40% { background-color: #1abc9c; }
+  60% { background-color: #3498db; }
+  80% { background-color: #9b59b6; }
+  100% { background-color: #e74c3c; }
+}
+
+
+<!--Table-->
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#customers td, #customers th {
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #ce12ae;}
+
+#customers tr:hover {background-color: rgb(109, 109, 109);}
+
+#customers th {
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+}
+
+.map { 
+  position: absolute;
+  left: 37em;
+  top: 60em;
+  }
+
+p{
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;}
+
+  h3{
+    font-size: 2em;
+  }
+  </style>
+
+    </head>
+
+    <body>
+
+      <header>
+        <nav class="topnav_account">
+            <ul>
+                <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+                <li><a href="../register_login/register.html">Register</a></li>
+                <li><a href="../register_login/login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="container">
+            <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+            <nav class="menunav">
+                <ul>
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../menupage/menu.html">Menu</a></li>
+                    <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                    <li><a href="../special/special.html">Special</a></li>
+                    <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                    <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+      <!--auto slide-->
+      <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" style="width: 100%; height: 15cm;" src="location1.jpg" >
+        <img class="mySlides" style="width: 100%; height: 15cm;" src="location2.jpg" >
+        <img class="mySlides" style="width: 100%; height: 15cm;" src="location3.jpg" >
+      </div>
+
+<!--Special Menu-->
+<button class="tablink" onclick="openPage('Kedah', this, 'red')">Kedah</button>
+<button class="tablink" onclick="openPage('Penang', this, 'yellow')" id="defaultOpen">Penang</button>
+<button class="tablink" onclick="openPage('KualaLumpur', this, 'green')">Kuala Lumpur</button>
+<button class="tablink" onclick="openPage('Johor', this, 'blue')">Johor</button>
+
+<div id="Kedah" class="tabcontent">
+  <h3 style="text-align: center;"><b><u>HuaheePya Branch - Kedah</u></b></h3>
+  <p>The Campus for HuaheePya where are established by 2015/ 04/ 03. <br>It was placed with Kedah Taska Pelangi Imlian.</p>
+  <img src="kedah.jpg" height="25%" width="30%" style="right: 20px;" />
+  <table id="customers">
+    <tr>
+      <!--Table-->
+    <th style = "text-align:center; " colspan = "5">Schedule</th>
+    </tr>
+      <tr>
+        <th>Daily</th>
+        <th>Opening Time</th>
+        <th>Resting Time</th>
+        <th>Closing Time</th>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>11:30 a.m.</td>
+        <td>2:45 p.m.</td>
+        <td>8:15 p.m.</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>12:15 a.m.</td>
+        <td>3:00 p.m.</td>
+        <td>8:40 p.m.</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+    </table>
+
+  <div id="googleMap" style="width:100%;height:400px;"></div>
+  <!--Embbeded Map-->
+  <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7709.42232012422!2d100.41346755102524!3d6.04092310213918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304b466c1ca5271b%3A0xdd118edc37e921eb!2sTaska%20Pelangi%20Impian!5e0!3m2!1sen!2smy!4v1586056017225!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+</div>
+
+<div id="Penang" class="tabcontent">
+  <h3 style="text-align: center;"><b><u>HuaheePya Main Branch - Penang</u></b></h3>
+  <p>The Main campus for Huaheepya where are established by 2013/ 07/ 12. <br>It was have a long time business history.The Store manager is Khaw Zhe Xue.</p> 
+  <img src="timesquare.jpg" height="25%" width="30%" style="right: 20px;" />
+  <table id="customers">
+    <tr>
+    <th style = "text-align:center; " colspan = "5">Schedule</th>
+    </tr>
+      <tr>
+        <th>Daily</th>
+        <th>Opening Time</th>
+        <th>Resting Time</th>
+        <th>Closing Time</th>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>10:30 a.m.</td>
+        <td>2:45 p.m.</td>
+        <td>8:15 p.m.</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>7:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>12:15 a.m.</td>
+        <td>3:00 p.m.</td>
+        <td>8:40 p.m.</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+    </table>
+
+  <div id="googleMap" style="width:80%;height:200px;"></div>
+  <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18894.381802995475!2d100.30548566923788!3d5.40867325809653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac3bfba4e83c7%3A0xd80bc780d6f87582!2sPenang%20Times%20Square!5e0!3m2!1sen!2smy!4v1586056055512!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
+</div>
+
+
+<div id="KualaLumpur" class="tabcontent">
+  <h3 style="text-align: center;"><b><u>HuaheePya Branch - Kuala Lumpur</u></b></h3>
+  <p>The Campus for HuaheePya where are established by 2010/ 02/ 04. <br>It was placed with Kuala Lumpur PPU Taman Melati.</p>
+  <img src="kl.jpg" height="25%" width="30%" style="right: 20px;" />
+  <table id="customers">
+    <tr>
+    <th style = "text-align:center; " colspan = "5">Schedule</th>
+    </tr>
+      <tr>
+        <th>Daily</th>
+        <th>Opening Time</th>
+        <th>Resting Time</th>
+        <th>Closing Time</th>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>10:30 a.m.</td>
+        <td>1:45 p.m.</td>
+        <td>8:15 p.m.</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>9:45 a.m.</td>
+        <td>2:35 p.m.</td>
+        <td>7:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>12:15 a.m.</td>
+        <td>3:00 p.m.</td>
+        <td>8:40 p.m.</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+    </table>
+
+    <div id="googleMap"  style="width:100%;height:400px;"></div>
+  <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1935.0594016725656!2d101.72711608332632!3d3.219323438502283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38688ea7bba3%3A0xb523b99e2bc03824!2sPPU%20TAMAN%20MELATI!5e0!3m2!1sen!2smy!4v1586055954418!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+</div>
+
+<div id="Johor" class="tabcontent">
+  <h3 style="text-align: center;"><b><u>HuaheePya Branch - Johor</u></b></h3>
+  <p>The Campus for HuaheePya where are established by 2016/ 03/ 11. <br>It was placed with Johor Aeon Mall.</p>
+  <img src="johor.jpg" height="25%" width="30%" style="right: 20px;" />
+  <table id="customers">
+    <tr>
+    <th style = "text-align:center; " colspan = "5">Schedule</th>
+    </tr>
+      <tr>
+        <th>Daily</th>
+        <th>Opening Time</th>
+        <th>Resting Time</th>
+        <th>Closing Time</th>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>11:30 a.m.</td>
+        <td>2:45 p.m.</td>
+        <td>8:15 p.m.</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>9:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>12:15 a.m.</td>
+        <td>3:00 p.m.</td>
+        <td>8:40 p.m.</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>10:45 a.m.</td>
+        <td>1:35 p.m.</td>
+        <td>6:50 p.m.</td>
+      </tr>
+    </table>
+
+  <div id="googleMap" style="width:100%;height:400px;"></div>
+  <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16420.227547923776!2d103.60920558319603!3d1.6350205759655687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da79e921d18501%3A0xf9295c7d23ed9c38!2sAEON%20Mall%20KULAI!5e0!3m2!1sen!2smy!4v1586056111180!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+</div>
+
+<footer>
+  <div class="fooimg">
+      <p>Visit us on:&nbsp;&nbsp;</p>
+      <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+      <p>&nbsp;</p>
+      <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <img id="debit" src="../template/debit-icons.png" />
+      <img id="credit" src="../template/credit-card-icons.png" />
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <img id="grab" src="../template/grabpay.png" />
+      <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use 
+        ("TERMS AND CONDITIONS") 
+          , including the privacy policy 
+          ("<a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") 
+          (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.</div>
+  </div>
+</footer>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+</script>
+    </body>
+</html>

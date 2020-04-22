@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../template/template.css" type="text/css" rel="stylesheet">
+<link rel="icon" href="../template/small-logo.ico" />
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<title>Contact Us</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+body{background-image: url('background1.jpg');}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 30em;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border-radius: 5px;
+  border: 4px solid rgb(255, 255, 255);
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #ec8a09;}
+#customers tr:nth-child(odd){background-color: rgb(232, 235, 20);}
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.customers2 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 110%;
+  margin-right: 2em;
+}
+
+.customers2 td, .customers2 th {
+  border-radius: 5px;
+  border: 4px solid rgb(255, 255, 255);
+  padding: 8px;
+}
+
+.customers2 tr:nth-child(even){background-color: #ece809;}
+.customers2 tr:nth-child(odd){background-color: rgb(235, 124, 20);}
+.customers2 tr:hover {background-color: #ddd;}
+
+.customers2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+table{
+  height: 20em;
+}
+
+h3,h4{
+  color: #ece809;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  color: orange;
+}
+
+p{
+  color: #ece809;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+a:hover{
+  color:white;
+}
+
+<!---->
+
+.dropbtn {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.dropbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.dropbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.dropbtn:hover span {
+  padding-right: 25px;
+}
+
+.dropbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: right;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="topnav_account">
+        <ul>
+            <li><a href="../khaw_zhe_xue/contact.html">Contact Us</a></li>
+            <li><a href="../register_login/register.html">Register</a></li>
+            <li><a href="../register_login/login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <a href="../home.html" id="logo"><img src="../template/logo-glow.png" alt="HuaheePya"></a>
+
+        <nav class="menunav">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../menupage/menu.html">Menu</a></li>
+                <li><a href="../khaw_zhe_xue/promotion.html">Promotion</a></li>
+                <li><a href="../special/special.html">Special</a></li>
+                <li><a href="../khaw_zhe_xue/location.html">Location</a></li>
+                <li><a href="../khaw_zhe_xue/about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--Promotion Slide-->
+<div class="w3-content w3-section" style="max-width:500px; margin-left: 19em; margin-top: 1em;">
+  <img class="mySlides" style="width: 140%; height: 25em; border-radius: 5px; border: 4px solid rgb(255, 176, 5);" src="contact.jpg"  >
+  <img class="mySlides"  style="width: 140%; height: 25em; border-radius: 5px; border: 4px solid rgb(255, 176, 5);" src="contact1.jpg" >
+  <img class="mySlides"  style="width: 140%; height: 25em; border-radius: 5px; border: 4px solid rgb(255, 176, 5);" src="contact2.jpeg" >
+</div>
+
+<h3 style="font-family: Arial, Helvetica, sans-serif; font-size: 2em; text-align: center; color:yellow;">Welcome to Contact Us_ __</h3>
+<!--Table-->
+<table>
+  <tr>
+    <th>
+      <table class="customers2" style="margin-left: 1em;">
+        <th style = "text-align:center;" colspan = "5">Contact Tax</th>
+        <tr>
+          <th>Company Branch</th>
+          <th>Time Available</th>
+          <th>Contact Company</th>
+        </tr>
+        <tr>
+          <td>Penang Branch</td>
+          <td>Available 24 hours</td>
+          <td>+04 5647823</td>
+        </tr>
+        <tr>
+          <td>Kedah Branch</td>
+          <td>Available 24 hours</td>
+          <td>+04 6774590</td>
+        </tr>
+        <tr>
+          <td>Kuala Lumpur Branch</td>
+          <td>Available 24 hours</td>
+          <td>+04 5667456</td>
+        </tr>
+        <tr>
+          <td>Johor Branch</td>
+          <td>Available 24 hours</td>
+          <td>+04 3454367</td>
+        </tr>
+      </table>
+    </th>
+      <th>
+        <table id="customers" style="margin-left: 10em;" >
+          <tr>
+          <th style = "text-align:center;" colspan = "5">Contact Us</th>
+          </tr>
+            <tr>
+              <th>Company Campus</th>
+              <th>Campus Master</th>
+              <th>Contact Number</th>
+            </tr>
+            <tr>
+              <td>Penang Campus</td>
+              <td>Khaw Zhe Xue</td>
+              <td>011-5667890</td>
+            </tr>
+            <tr>
+              <td>Kedah Campus</td>
+              <td>Ong Chen Xiang</td>
+              <td>012-3454678</td>
+            </tr>
+            <tr>
+              <td>Kuala Lumpur Campus</td>
+              <td>Chin Sze Sing</td>
+              <td>016-6677873</td>
+            </tr>
+            <tr>
+              <td>Johor Campus</td>
+              <td>Tan Yi Xuan</td>
+              <td>019-23345678</td>
+            </tr>
+          </table>
+      </th>
+  </tr>
+</table>
+<br>
+<hr>
+<table>
+  <tr>
+    <th style="width: 30em;">
+<h2>Product &Technical Support</h2>
+<h3>Penang Branch</h3>
+<p>Customer Resolution Unit (CRU)
+<br>P.O. Box 10054<br>HYP Penang<br>13300 Tasek Gelugor</p>
+<h3>Kedah Branch</h3>
+<p>Customer Resolution Unit (CRU)
+<br>P.O. Box 14520<br>HHB Kedah<br>24536 Taman Riayh</p>
+</th>
+<th style="width: 30em;">
+<h3>Kuala Lumpur Branch</h3>
+<p>Customer Resolution Unit (CRU)
+<br>P.O. Box 10338<br>GPO Kuala Lumpur<br>50710 Wilayah Persekutuan</p>
+<h3>Johor Branch</h3>
+<p>Customer Resolution Unit (CRU)
+<br>P.O. Box 12365<br>FFV Johor<br>44672 Genila Pyar</p>
+<p>Call centre works from Monday to Sunday 9:00 to 21:00<br>English, Mandarin, Bahasa Malaysia</p>
+</th>
+<th style="width: 30em;">
+<h2>Browse Online Support</h2>
+<p>We support to quickly find manuals, software, updates, FAQs, and service centers.</p>
+<br>
+<h2>EMAIL SUPPORT</h2>
+<p>Please email us your questions regarding any HUAWEI Device product.</p>
+<a href="mailto:HuaheePya@example.com?Subject=Complain%20Letter" target="_top">Click Here for email !!</a>
+
+</th>
+</tr>
+</table>
+<!--Form-->
+<br>
+<hr>
+<h3 style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 1.3em;">Contact Form</h3>
+<p ><b>Welcome to HuaheePya Customer Service. Please fill in your details below and We will use the information provided for customer service purposes.<br> Please note that HuaheePya values and respects your privacy and will only use your data for services purposes and will not share it with third parties.<br> Please read the Huawei Privacy Statement for more information.</b></p>
+<div class="container1">
+  <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Contact Number</label>
+    <input type="text" id="contact" name="contact" placeholder="Your contact number..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">Malaysia</option>
+      <option value="usa">Japan</option>
+      <option value="usa">Other</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<hr>
+
+<!--FUNCTION TO SEARCH AND ANIMATION BUTTON-->
+
+<h3 style="color: white;">Tell us about your issue so we can help you more quickly.</h3>
+<p style="color: white;">Please click this button for solve it your problem.</p>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><span>Click me !</span></button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <div class="tab">
+      <a class="tablinks" onmouseover="openCity(event, 'nothing')"></a>
+      <a class="tablink"onmouseover="openCity(event, 'login')">How to Login in ?</a>
+      <a class="tablinks" onmouseover="openCity(event, 'code')">How to get the Discount code ?</a>
+      <a class="tablinks" onmouseover="openCity(event, 'none')">Can't find solution ?</a>
+      <a class="tablinks" onmouseover="openCity(event, 'nothing')"></a>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="login" class="tabcontent">
+  <h3>Login common problem</h3>
+  <p>Somebody can't find the login button.</p>
+  <p>So that, please take care that Upper right corner of the website Page.There were having login in button and sign in button.</p>
+  <p>Cannot log in ? Maybe you can try to sign in first.</p>
+  <p>If you having other problem, please Asking.Very happy that can giving a service.</p>
+</div>
+
+<div id="code" class="tabcontent">
+  <h3>How to get the Discount code ?</h3>
+  <p>First, You must enter the Promotion website with click the Website Header that Promotion button.</p> 
+  <p>Then, You will see many Promotion Slide at there.</p> 
+  <p>Click the Promotion Slide to get the Discount Code from Alert box.</p> 
+  <p>If you having other problem, please Asking.Very happy that can giving a service.</p>
+  
+</div>
+
+<div id="none" class="tabcontent">
+  <h3>Can't find the common problem to get solution ?</h3>
+  <p>You can click the Link to email it or fill in the form of upper the Website.</p>
+  <a href="mailto:HuaheePya@example.com?Subject=Complain%20Letter" target="_top">Click Here for email !!</a>
+  <p>If you having other problem, please Asking.Very happy that can giving a service.</p>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<hr>
+<div class="img">
+  <p style="color: white; font-family: Arial, Helvetica, sans-serif; text-align: center;"><b>Please continue to look forward for the next. Please also continue to support us a lot, so that we have the impetus for continuous improvement.</b></p>
+  </div>
+
+  <footer>
+    <div class="fooimg">
+        <p>Visit us on:&nbsp;&nbsp;</p>
+        <a href="https://www.facebook.com/"><img class="outlink" id="facebook" src="../template/facebook.png" /></a>
+        <p>&nbsp;</p>
+        <a href="https://www.instagram.com/"><img class="outlink" id="instagram" src="../template/instagram.png" /></a>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <img id="debit" src="../template/debit-icons.png" />
+        <img id="credit" src="../template/credit-card-icons.png" />
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <img id="grab" src="../template/grabpay.png" />
+        <div class="term-block">By accessing and using this Site, you agree to the terms and conditions of use 
+            ("TERMS AND CONDITIONS") 
+            , including the privacy policy 
+            ("<a href="../PrivacyPolicy/Privacy Policy.htm">PRIVACY POLICY</a>") 
+            (collectively the “TERMS”) and to comply with all applicable laws and regulations. If you are not amenable and you do not agree to these Terms, you may not use this Site or any of the services offered through the site. We reserve the right to make modifications or update these Terms and by continuously accessing this Site, you acknowledge that you agree to be bound by such modification and updates. For any inquiries, you may send us an e-mail regarding your inquiries and comments about our privacy policies to contact.us@huaheepya.com.my.</div>
+    </div>
+</footer>
+
+<script>
+  /* valitation of form */
+function validateForm() {
+ var x = document.forms["myForm"]["fname"].value;
+var y = document.forms["myForm"]["subject"].value;
+var z = document.forms["myForm"]["contact"].value;
+
+if (x.length == 0 || y.length == 0 || z.length == 0)
+{    
+    alert("Error,You have blank to filled finished yet !!\n >.<||");
+    return false;
+  }
+  else
+  {
+  myFunction();
+  }
+}
+  /* prompt box */
+function myFunction() {
+  var x = confirm("Are you confrom to submit ?");
+  if (x == true) {
+   alert("Thank you for your Oponion !!")
+  } 
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+ /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+/* function for search */
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+    function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

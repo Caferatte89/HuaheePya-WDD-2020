@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Bebasneue';
+    src: url('BebasNeue-Regular.ttf')
+}
+
+body { background: rgb(182, 0, 0); }
+
+.container { background: linear-gradient(#3b3b3b, #facd07 10%, #facd07 90%, #b60000); }
+
+footer { background: linear-gradient(#b60000, #000000 30%); }
+
+.welcome {
+    min-height: 40em;
+    padding-bottom: -1vw;
+    background-image: url("background.jpg");
+    background-size: cover;
+    opacity: 0;
+    box-shadow: 0 0 8px 8px rgb(182, 0, 0) inset;
+}
+
+.back-audio img {
+    height: 3vw;
+    width: 3vw;
+
+    position: absolute;
+    margin-top: 32vw;
+    margin-left: 92vw;
+
+    border: transparent;
+    outline: transparent;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.back-audio img:hover {
+    filter: brightness(75%);
+}
+
+.animatedbg #bird {
+    position: absolute;
+    height: 10vw; 
+    width: 12vw;
+
+    padding-left: -3vw;
+    padding-top: 30vw;
+
+    opacity: 0;
+    
+    animation-name: bird-moving;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bird-moving {
+    0% {padding-top: 25vw;}
+    50% {padding-top: 26vw;}
+    100% {padding-top: 25vw;}
+}
+
+.animatedbg [id^="flower-"] {
+    position: static;
+    height: 22vw;
+    width: 22vw;
+
+    float: right;
+    padding-top: 2vw;
+
+    opacity: 0;
+}
+
+.animatedbg #flower-left {
+    margin-top: 4vw;
+    position: absolute;
+    height: 9.5vw;
+    width: 17vw;
+
+    float: none;
+}
+
+.animatedbg #title {
+    position: absolute;
+    height: 22vw;
+    width: 45vw;
+
+    padding-top: 8vw;
+    padding-left: 27vw;
+
+    left: 0;
+    animation-name: title-logo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+@keyframes title-logo {
+    0% {padding-top: 8vw; transform: rotate(0deg);}
+    25% {padding-top: 6vw; transform: rotate(1deg);}
+    50% {padding-top: 8vw; transform: rotate(0deg);}
+    75% {padding-top: 6vw; transform: rotate(-1deg);}
+    100% {padding-top: 8vw; transform: rotate(0deg);}
+}
+
+.animatedbg [id^="best-"] {
+    position: absolute;
+    height: 6vw;
+    width: 58vw;
+
+    padding-top: 31vw;
+    padding-left: 19.5vw;
+    opacity: 0;
+}
+
+.animatedbg #best-glow {
+    padding-top: 29vw;
+
+    animation-name: best-glow;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes best-glow {
+    0% {opacity: 0%;}
+    50% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+.recommend {
+    min-height: 30vw;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("rec-background.jpg");
+    background-size: cover;
+    box-shadow: 0 0 8px 8px rgb(182, 0, 0) inset;
+}
+
+.recommend #startOrder {
+    margin: 4vw 10vw 2vw 10vw;
+    padding: 0.5vw;
+    transition: all 0.3s ease;
+
+    background-color: rgba(234, 222, 207);
+    border: outset;
+    border-color: rgba(234, 222, 207);
+    border-radius: 0.5vw;
+    box-shadow: 0 0.2vw 0.4vw #fff, 0 -0.1vw 0.1vw #666, inset 0 -0.2vw 0.2vw rgba(0,0,0,0.5), inset 0 0.1vw 0.1vw rgba(255,255,255,0.8);
+
+    color: black;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(105, 105, 105, 0.5);
+    font-family: Bebasneue, Arial;
+    font-size: 2vw;
+}
+
+.recommend #startOrder:hover {
+    background: rgb(185, 176, 164);
+    color: rgb(224, 224, 224);
+    text-shadow: 1px 1px 10px rgba(224, 224, 224, 0.5);
+}
+
+.recommend #startOrder:active { border: inset; }
+
+.recommend [id^="box-"] {
+    margin: 2vw 0 2vw 10vw;
+    width: 18.75vw;
+    height: 18.75vw;
+    padding: 0;
+    display: inline-block;
+
+    background: rgb(234, 222, 207);
+    transition: all 0.3s ease;
+    user-select: none;
+
+    text-align: center;
+    border: 0.1vw outset;
+    border-radius: 0.75vw;
+    border-color: rgba(234, 222, 207);
+    box-shadow: 0 0.2vw 0.4vw #fff, 0 -0.1vw 0.1vw #666, inset 0 -0.4vw 0.4vw rgba(0,0,0,0.5), inset 0 0.1vw 0.1vw rgba(255,255,255,0.8);
+}
+
+.recommend [id^="box-"] [id^="darkbg-"] {
+    position: absolute;
+    width: 18.75vw;
+    height: 18.75vw;
+    border-radius: 0.75vw;
+    transition: all 0.3s ease;
+}
+
+.recommend [id^="box-"] p {
+    margin: 0;
+    width: 17.75vw;
+    height: 8vw;
+    padding: 10vw 0 0 0.5vw;
+
+    position: absolute;
+    border-radius: 0.75vw;
+    transition: all 0.3s ease;
+    color: transparent;
+
+    font-family: Bebasneue, Arial;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.recommend [id^="box-"] p:hover { 
+
+    color: white; 
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+
+#findLocation {
+    margin: 1vw 11vw 4vw 11vw;
+    padding: 1vw;
+    transition: all 0.3s ease;
+    clear: both;
+
+    background-color: rgba(234, 222, 207);
+    border: outset;
+    border-color: rgba(234, 222, 207);
+    border-radius: 0.5vw;
+    box-shadow: 0 0.2vw 0.4vw #fff, 0 -0.1vw 0.1vw #666, inset 0 -0.2vw 0.2vw rgba(0,0,0,0.5), inset 0 0.1vw 0.1vw rgba(255,255,255,0.8);
+
+    color: black;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(105, 105, 105, 0.5);
+    font-family: Bebasneue, Arial;
+    font-size: 2vw;
+}
+
+#findLocation a {
+    padding: 0 0.5vw;
+    text-decoration: none;
+    transition: all 0.1s ease;
+
+    border: 0.1vw solid;
+    border-radius: 0.25vw;
+
+    background-color: rgba(234, 222, 207);
+    color: purple;
+}
+
+#findLocation a:hover { color: red; }
+
+#findLocation a:active { color: yellow; }
